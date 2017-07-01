@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\BrickBreaker.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{BA1CBED9-3E6B-46D1-AD3B-741D725C86E4}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\BrickBreaker.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\BrickBreakerEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{ABDC46DE-421D-49B7-A3C2-A6706267C313}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\BrickBreaker">
+      <UniqueIdentifier>{3D1BCB69-67A4-4EFD-A632-42E65E531E71}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\BrickBreaker\BrickBreaker.Build.cs">
+      <Filter>Source\BrickBreaker</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\BrickBreaker\AmmoPowerUp.h">
+      <Filter>Source\BrickBreaker\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BrickBreaker\Ball.h">
+      <Filter>Source\BrickBreaker\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BrickBreaker\Block.h">
+      <Filter>Source\BrickBreaker\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BrickBreaker\BlockAnchor.h">
+      <Filter>Source\BrickBreaker\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BrickBreaker\BrickBreaker.h">
+      <Filter>Source\BrickBreaker\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BrickBreaker\BrickBreakerGameModeBase.h">
+      <Filter>Source\BrickBreaker\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BrickBreaker\CameraMan.h">
+      <Filter>Source\BrickBreaker\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BrickBreaker\Enums.h">
+      <Filter>Source\BrickBreaker\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BrickBreaker\GameManager.h">
+      <Filter>Source\BrickBreaker\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BrickBreaker\LevelGenerator.h">
+      <Filter>Source\BrickBreaker\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BrickBreaker\Paddle.h">
+      <Filter>Source\BrickBreaker\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BrickBreaker\PlayerHUD.h">
+      <Filter>Source\BrickBreaker\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BrickBreaker\PowerUp.h">
+      <Filter>Source\BrickBreaker\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BrickBreaker\PowerUpManager.h">
+      <Filter>Source\BrickBreaker\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BrickBreaker\Projectile.h">
+      <Filter>Source\BrickBreaker\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BrickBreaker\Rocket.h">
+      <Filter>Source\BrickBreaker\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BrickBreaker\TimedPowerUp.h">
+      <Filter>Source\BrickBreaker\HeaderFiles</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\BrickBreaker\AmmoPowerUp.cpp">
+      <Filter>Source\BrickBreaker\CppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BrickBreaker\Ball.cpp">
+      <Filter>Source\BrickBreaker\CppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BrickBreaker\Block.cpp">
+      <Filter>Source\BrickBreaker\CppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BrickBreaker\BlockAnchor.cpp">
+      <Filter>Source\BrickBreaker\CppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BrickBreaker\BrickBreaker.cpp">
+      <Filter>Source\BrickBreaker\CppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BrickBreaker\BrickBreakerGameModeBase.cpp">
+      <Filter>Source\BrickBreaker\CppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BrickBreaker\CameraMan.cpp">
+      <Filter>Source\BrickBreaker\CppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BrickBreaker\Enums.cpp">
+      <Filter>Source\BrickBreaker\CppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BrickBreaker\LevelGenerator.cpp">
+      <Filter>Source\BrickBreaker\CppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BrickBreaker\GameManager.cpp">
+      <Filter>Source\BrickBreaker\CppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BrickBreaker\Paddle.cpp">
+      <Filter>Source\BrickBreaker\CppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BrickBreaker\PlayerHUD.cpp">
+      <Filter>Source\BrickBreaker\CppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BrickBreaker\PowerUp.cpp">
+      <Filter>Source\BrickBreaker\CppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BrickBreaker\PowerUpManager.cpp">
+      <Filter>Source\BrickBreaker\CppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BrickBreaker\Projectile.cpp">
+      <Filter>Source\BrickBreaker\CppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BrickBreaker\Rocket.cpp">
+      <Filter>Source\BrickBreaker\CppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BrickBreaker\TimedPowerUp.cpp">
+      <Filter>Source\BrickBreaker\CppFiles</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source\BrickBreaker\HeaderFiles">
+      <UniqueIdentifier>{246d86cb-eaa8-4fe0-b0be-3e99590164c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\BrickBreaker\CppFiles">
+      <UniqueIdentifier>{eafb74f0-f2f6-4f12-996e-e6f65855c91b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

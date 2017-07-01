@@ -1,0 +1,23 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-BrickBreaker-3672.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Program Files\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\AmmoPowerUp.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\Ball.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\BrickBreaker.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\BrickBreakerGameModeBase.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\Paddle.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\PowerUp.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\PowerUpManager.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\Projectile.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\Rocket.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\TimedPowerUp.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\BrickBreaker.generated.cpp.obj"
+"C:\Program Files\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\PCLaunch.rc.res"
+"C:\Program Files\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BrickBreaker-3672.lib"

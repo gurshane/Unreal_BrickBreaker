@@ -1,0 +1,3 @@
+C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Source\BrickBreaker\BrickBreaker.Build.cs
+C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Source\BrickBreaker.Target.cs
+C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Source\BrickBreakerEditor.Target.cs
