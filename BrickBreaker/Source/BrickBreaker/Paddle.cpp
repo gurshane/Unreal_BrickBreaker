@@ -4,6 +4,9 @@
 #include "Camera/CameraComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/BoxComponent.h"
+#include "Components/InputComponent.h"
+#include "Runtime/CoreUObject/Public/UObject/ConstructorHelpers.h"
+
 
 // Sets default values
 APaddle::APaddle()
@@ -15,16 +18,21 @@ APaddle::APaddle()
 	paddleMesh->SetupAttachment(RootComponent);
 	paddleMesh->bCastDynamicShadow = false;
 	paddleMesh->CastShadow = false;
+	
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> BoxVisualAsset(TEXT("StaticMesh/Engine/BasicShapes/Cube.Cube"));
+	if (BoxVisualAsset.Succeeded())
+	{
+		paddleMesh->SetStaticMesh(BoxVisualAsset.Object);
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Problem getting box mesh"));
+	}
 	RootComponent = paddleMesh;
-
-	paddleCam = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
-	paddleCam->SetupAttachment(RootComponent);
-	paddleCam->SetRelativeLocation(FVector(-200.0f, 0.0f, 0.0f));
-	paddleCam->bUseControllerViewRotation = false;
-
 
 	paddleCollider = CreateDefaultSubobject<UBoxComponent>(TEXT("Collider"));
 	paddleCollider->SetupAttachment(RootComponent);
+	paddleCollider->InitBoxExtent(FVector(1.0f, 4.0f, 1.0f));
 
 }
 
@@ -47,5 +55,21 @@ void APaddle::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	PlayerInputComponent->BindAxis("HorizontalMovement", this, &APaddle::MovePaddle);
+
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &APaddle::Fire);
+}
+
+void APaddle::MovePaddle(float value)
+{
+	AddMovementInput(FVector(0.0f, 1.0f, 0.0f), value, false);
+}
+
+void APaddle::Fire()
+{
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Fire!"));
+	}
 }
 

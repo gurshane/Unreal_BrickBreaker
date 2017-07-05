@@ -35,6 +35,8 @@ void EmptyLinkFunctionForGeneratedCode1BrickBreaker() {}
 	BRICKBREAKER_API class UClass* Z_Construct_UClass_AGameManager();
 	BRICKBREAKER_API class UClass* Z_Construct_UClass_ALevelGenerator_NoRegister();
 	BRICKBREAKER_API class UClass* Z_Construct_UClass_ALevelGenerator();
+	BRICKBREAKER_API class UFunction* Z_Construct_UFunction_APaddle_Fire();
+	BRICKBREAKER_API class UFunction* Z_Construct_UFunction_APaddle_MovePaddle();
 	BRICKBREAKER_API class UClass* Z_Construct_UClass_APaddle_NoRegister();
 	BRICKBREAKER_API class UClass* Z_Construct_UClass_APaddle();
 	BRICKBREAKER_API class UClass* Z_Construct_UClass_APlayerHUD_NoRegister();
@@ -272,6 +274,49 @@ void EmptyLinkFunctionForGeneratedCode1BrickBreaker() {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ALevelGenerator);
 	void APaddle::StaticRegisterNativesAPaddle()
 	{
+		UClass* Class = APaddle::StaticClass();
+		static const TNameNativePtrPair<ANSICHAR> AnsiFuncs[] = {
+			{ "Fire", (Native)&APaddle::execFire },
+			{ "MovePaddle", (Native)&APaddle::execMovePaddle },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, AnsiFuncs, 2);
+	}
+	UFunction* Z_Construct_UFunction_APaddle_Fire()
+	{
+		UObject* Outer=Z_Construct_UClass_APaddle();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("Fire"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00020401, 65535);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("Paddle.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_APaddle_MovePaddle()
+	{
+		struct Paddle_eventMovePaddle_Parms
+		{
+			float Value;
+		};
+		UObject* Outer=Z_Construct_UClass_APaddle();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("MovePaddle"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00020401, 65535, sizeof(Paddle_eventMovePaddle_Parms));
+			UProperty* NewProp_Value = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("Value"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(Value, Paddle_eventMovePaddle_Parms), 0x0010000000000080);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("Paddle.h"));
+#endif
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_APaddle_NoRegister()
 	{
@@ -290,12 +335,16 @@ void EmptyLinkFunctionForGeneratedCode1BrickBreaker() {}
 				UObjectForceRegistration(OuterClass);
 				OuterClass->ClassFlags |= 0x20900080;
 
+				OuterClass->LinkChild(Z_Construct_UFunction_APaddle_Fire());
+				OuterClass->LinkChild(Z_Construct_UFunction_APaddle_MovePaddle());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_paddleCollider = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("paddleCollider"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(paddleCollider, APaddle), 0x0010000000080008, Z_Construct_UClass_UBoxComponent_NoRegister());
 				UProperty* NewProp_paddleMesh = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("paddleMesh"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(paddleMesh, APaddle), 0x0010000000080009, Z_Construct_UClass_UStaticMeshComponent_NoRegister());
 				UProperty* NewProp_paddleCam = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("paddleCam"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(paddleCam, APaddle), 0x0010000000080009, Z_Construct_UClass_UCameraComponent_NoRegister());
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_APaddle_Fire(), "Fire"); // 2934714315
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_APaddle_MovePaddle(), "MovePaddle"); // 4292536108
 				static TCppClassTypeInfo<TCppClassTypeTraits<APaddle> > StaticCppClassTypeInfo;
 				OuterClass->SetCppTypeInfo(&StaticCppClassTypeInfo);
 				OuterClass->StaticLink();
@@ -318,7 +367,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 		check(OuterClass->GetClass());
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APaddle, 2660525684);
+	IMPLEMENT_CLASS(APaddle, 2145132936);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_APaddle(Z_Construct_UClass_APaddle, &APaddle::StaticClass, TEXT("/Script/BrickBreaker"), TEXT("APaddle"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APaddle);
 	void APlayerHUD::StaticRegisterNativesAPlayerHUD()
@@ -480,8 +529,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), nullptr, FName(TEXT("/Script/BrickBreaker")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0xC939D111;
-			Guid.B = 0x7878510B;
+			Guid.A = 0x85C760D2;
+			Guid.B = 0x38D6E89E;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

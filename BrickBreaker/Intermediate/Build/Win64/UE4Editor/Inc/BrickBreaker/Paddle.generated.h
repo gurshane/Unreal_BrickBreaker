@@ -13,8 +13,46 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BRICKBREAKER_Paddle_generated_h
 
-#define BrickBreaker_Source_BrickBreaker_Paddle_h_13_RPC_WRAPPERS
-#define BrickBreaker_Source_BrickBreaker_Paddle_h_13_RPC_WRAPPERS_NO_PURE_DECLS
+#define BrickBreaker_Source_BrickBreaker_Paddle_h_13_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execFire) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->Fire(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execMovePaddle) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_Value); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->MovePaddle(Z_Param_Value); \
+		P_NATIVE_END; \
+	}
+
+
+#define BrickBreaker_Source_BrickBreaker_Paddle_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execFire) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->Fire(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execMovePaddle) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_Value); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->MovePaddle(Z_Param_Value); \
+		P_NATIVE_END; \
+	}
+
+
 #define BrickBreaker_Source_BrickBreaker_Paddle_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPaddle(); \
