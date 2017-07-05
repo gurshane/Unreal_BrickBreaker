@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BRICKBREAKER_Paddle_generated_h
 
-#define BrickBreaker_Source_BrickBreaker_Paddle_h_12_RPC_WRAPPERS
-#define BrickBreaker_Source_BrickBreaker_Paddle_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define BrickBreaker_Source_BrickBreaker_Paddle_h_12_INCLASS_NO_PURE_DECLS \
+#define BrickBreaker_Source_BrickBreaker_Paddle_h_13_RPC_WRAPPERS
+#define BrickBreaker_Source_BrickBreaker_Paddle_h_13_RPC_WRAPPERS_NO_PURE_DECLS
+#define BrickBreaker_Source_BrickBreaker_Paddle_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPaddle(); \
 	friend BRICKBREAKER_API class UClass* Z_Construct_UClass_APaddle(); \
@@ -25,7 +25,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define BrickBreaker_Source_BrickBreaker_Paddle_h_12_INCLASS \
+#define BrickBreaker_Source_BrickBreaker_Paddle_h_13_INCLASS \
 private: \
 	static void StaticRegisterNativesAPaddle(); \
 	friend BRICKBREAKER_API class UClass* Z_Construct_UClass_APaddle(); \
@@ -35,7 +35,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define BrickBreaker_Source_BrickBreaker_Paddle_h_12_STANDARD_CONSTRUCTORS \
+#define BrickBreaker_Source_BrickBreaker_Paddle_h_13_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API APaddle(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APaddle) \
@@ -48,7 +48,7 @@ private: \
 public:
 
 
-#define BrickBreaker_Source_BrickBreaker_Paddle_h_12_ENHANCED_CONSTRUCTORS \
+#define BrickBreaker_Source_BrickBreaker_Paddle_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API APaddle(APaddle&&); \
@@ -59,26 +59,26 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APaddle); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(APaddle)
 
 
-#define BrickBreaker_Source_BrickBreaker_Paddle_h_12_PRIVATE_PROPERTY_OFFSET
-#define BrickBreaker_Source_BrickBreaker_Paddle_h_9_PROLOG
-#define BrickBreaker_Source_BrickBreaker_Paddle_h_12_GENERATED_BODY_LEGACY \
+#define BrickBreaker_Source_BrickBreaker_Paddle_h_13_PRIVATE_PROPERTY_OFFSET
+#define BrickBreaker_Source_BrickBreaker_Paddle_h_10_PROLOG
+#define BrickBreaker_Source_BrickBreaker_Paddle_h_13_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	BrickBreaker_Source_BrickBreaker_Paddle_h_12_PRIVATE_PROPERTY_OFFSET \
-	BrickBreaker_Source_BrickBreaker_Paddle_h_12_RPC_WRAPPERS \
-	BrickBreaker_Source_BrickBreaker_Paddle_h_12_INCLASS \
-	BrickBreaker_Source_BrickBreaker_Paddle_h_12_STANDARD_CONSTRUCTORS \
+	BrickBreaker_Source_BrickBreaker_Paddle_h_13_PRIVATE_PROPERTY_OFFSET \
+	BrickBreaker_Source_BrickBreaker_Paddle_h_13_RPC_WRAPPERS \
+	BrickBreaker_Source_BrickBreaker_Paddle_h_13_INCLASS \
+	BrickBreaker_Source_BrickBreaker_Paddle_h_13_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define BrickBreaker_Source_BrickBreaker_Paddle_h_12_GENERATED_BODY \
+#define BrickBreaker_Source_BrickBreaker_Paddle_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	BrickBreaker_Source_BrickBreaker_Paddle_h_12_PRIVATE_PROPERTY_OFFSET \
-	BrickBreaker_Source_BrickBreaker_Paddle_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	BrickBreaker_Source_BrickBreaker_Paddle_h_12_INCLASS_NO_PURE_DECLS \
-	BrickBreaker_Source_BrickBreaker_Paddle_h_12_ENHANCED_CONSTRUCTORS \
+	BrickBreaker_Source_BrickBreaker_Paddle_h_13_PRIVATE_PROPERTY_OFFSET \
+	BrickBreaker_Source_BrickBreaker_Paddle_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	BrickBreaker_Source_BrickBreaker_Paddle_h_13_INCLASS_NO_PURE_DECLS \
+	BrickBreaker_Source_BrickBreaker_Paddle_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

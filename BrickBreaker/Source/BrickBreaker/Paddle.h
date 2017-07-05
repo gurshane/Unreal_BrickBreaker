@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "GameFramework/Character.h"
 #include "GameFramework/Pawn.h"
 #include "Paddle.generated.h"
 
@@ -15,6 +16,15 @@ public:
 	// Sets default values for this pawn's properties
 	APaddle();
 
+	UPROPERTY(EditAnywhere)
+	class UCameraComponent* paddleCam;
+
+	UPROPERTY(EditAnywhere)
+	UStaticMeshComponent* paddleMesh;
+
+	UPROPERTY()
+	class UBoxComponent* paddleCollider;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -26,6 +36,6 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	
+	void MovePaddle(float Value);
 	
 };

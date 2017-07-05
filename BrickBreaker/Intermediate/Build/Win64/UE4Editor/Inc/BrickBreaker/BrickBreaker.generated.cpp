@@ -18,6 +18,9 @@ void EmptyLinkFunctionForGeneratedCode1BrickBreaker() {}
 	ENGINE_API class UClass* Z_Construct_UClass_AActor();
 	ENGINE_API class UClass* Z_Construct_UClass_AGameModeBase();
 	ENGINE_API class UClass* Z_Construct_UClass_APawn();
+	ENGINE_API class UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
+	ENGINE_API class UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+	ENGINE_API class UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AHUD();
 
 	BRICKBREAKER_API class UClass* Z_Construct_UClass_ABlock_NoRegister();
@@ -288,6 +291,11 @@ void EmptyLinkFunctionForGeneratedCode1BrickBreaker() {}
 				OuterClass->ClassFlags |= 0x20900080;
 
 
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_paddleCollider = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("paddleCollider"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(paddleCollider, APaddle), 0x0010000000080008, Z_Construct_UClass_UBoxComponent_NoRegister());
+				UProperty* NewProp_paddleMesh = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("paddleMesh"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(paddleMesh, APaddle), 0x0010000000080009, Z_Construct_UClass_UStaticMeshComponent_NoRegister());
+				UProperty* NewProp_paddleCam = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("paddleCam"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(paddleCam, APaddle), 0x0010000000080009, Z_Construct_UClass_UCameraComponent_NoRegister());
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				static TCppClassTypeInfo<TCppClassTypeTraits<APaddle> > StaticCppClassTypeInfo;
 				OuterClass->SetCppTypeInfo(&StaticCppClassTypeInfo);
 				OuterClass->StaticLink();
@@ -296,13 +304,21 @@ void EmptyLinkFunctionForGeneratedCode1BrickBreaker() {}
 				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Navigation"));
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("Paddle.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("Paddle.h"));
+				MetaData->SetValue(NewProp_paddleCollider, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_paddleCollider, TEXT("ModuleRelativePath"), TEXT("Paddle.h"));
+				MetaData->SetValue(NewProp_paddleMesh, TEXT("Category"), TEXT("Paddle"));
+				MetaData->SetValue(NewProp_paddleMesh, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_paddleMesh, TEXT("ModuleRelativePath"), TEXT("Paddle.h"));
+				MetaData->SetValue(NewProp_paddleCam, TEXT("Category"), TEXT("Paddle"));
+				MetaData->SetValue(NewProp_paddleCam, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_paddleCam, TEXT("ModuleRelativePath"), TEXT("Paddle.h"));
 #endif
 			}
 		}
 		check(OuterClass->GetClass());
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APaddle, 4049635103);
+	IMPLEMENT_CLASS(APaddle, 2660525684);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_APaddle(Z_Construct_UClass_APaddle, &APaddle::StaticClass, TEXT("/Script/BrickBreaker"), TEXT("APaddle"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APaddle);
 	void APlayerHUD::StaticRegisterNativesAPlayerHUD()
@@ -464,7 +480,7 @@ void EmptyLinkFunctionForGeneratedCode1BrickBreaker() {}
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), nullptr, FName(TEXT("/Script/BrickBreaker")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x4451ECC9;
+			Guid.A = 0xC939D111;
 			Guid.B = 0x7878510B;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
