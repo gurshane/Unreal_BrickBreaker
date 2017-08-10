@@ -1,11 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Paddle.h"
-#include "Camera/CameraComponent.h"
-#include "Components/StaticMeshComponent.h"
-#include "Components/BoxComponent.h"
-#include "Components/InputComponent.h"
-#include "Runtime/CoreUObject/Public/UObject/ConstructorHelpers.h"
 
 
 // Sets default values
@@ -14,26 +9,34 @@ APaddle::APaddle()
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	paddleMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
-	paddleMesh->SetupAttachment(RootComponent);
-	paddleMesh->bCastDynamicShadow = false;
-	paddleMesh->CastShadow = false;
-	
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> BoxVisualAsset(TEXT("StaticMesh/Engine/BasicShapes/Cube.Cube"));
-	if (BoxVisualAsset.Succeeded())
-	{
-		paddleMesh->SetStaticMesh(BoxVisualAsset.Object);
-	}
-	else
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Problem getting box mesh"));
-	}
-	RootComponent = paddleMesh;
+	PaddleCollider = CreateDefaultSubobject<UBoxComponent>(TEXT("COLLIDER"));
+	RootComponent = PaddleCollider;
+	PaddleCollider->SetCollisionProfileName(TEXT("Pawn"));
 
-	paddleCollider = CreateDefaultSubobject<UBoxComponent>(TEXT("Collider"));
-	paddleCollider->SetupAttachment(RootComponent);
-	paddleCollider->InitBoxExtent(FVector(1.0f, 4.0f, 1.0f));
+	PaddleMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MESH"));
+	PaddleMesh->SetupAttachment(RootComponent);
 
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> BoxVisual(TEXT("/Game/StarterContent/Shapes/Shape_Cube.Shape_Cube"));
+	if (BoxVisual.Succeeded())
+	{
+		PaddleMesh->SetStaticMesh(BoxVisual.Object);
+		PaddleMesh->SetWorldScale3D(FVector(1.0f));
+	}
+
+	PaddleMovementComponent = CreateDefaultSubobject<UPaddleMovementComponent>(TEXT("Movement"));
+	PaddleMovementComponent->UpdatedComponent = RootComponent;
+
+	PaddleCameraArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraArm"));
+	PaddleCameraArm->TargetArmLength = 1200.0f;
+	PaddleCameraArm->bEnableCameraLag = false;
+	PaddleCameraArm->CameraLagSpeed = cameraLagSpeed;
+	//PaddleCameraArm->SetupAttachment(RootComponent);
+
+	PaddleCam = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
+	PaddleCam->SetupAttachment(PaddleCameraArm, USpringArmComponent::SocketName);
+	PaddleCam->bAutoActivate = true;
+
+	AutoPossessPlayer = EAutoReceiveInput::Player0;
 }
 
 // Called when the game starts or when spawned
@@ -55,21 +58,10 @@ void APaddle::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-	PlayerInputComponent->BindAxis("HorizontalMovement", this, &APaddle::MovePaddle);
-
-	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &APaddle::Fire);
 }
 
-void APaddle::MovePaddle(float value)
+UPawnMovementComponent* APaddle::GetMovementComponent() const
 {
-	AddMovementInput(FVector(0.0f, 1.0f, 0.0f), value, false);
-}
-
-void APaddle::Fire()
-{
-	if (GEngine)
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Fire!"));
-	}
+	return PaddleMovementComponent;
 }
 

@@ -1,0 +1,82 @@
+/MANIFEST:NO
+/NOLOGO
+/DEBUG
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/FIXED:No
+/NXCOMPAT
+/STACK:5000000
+/DELAY:UNLOAD
+/DLL
+/PDBALTPATH:%_PDB%
+/OPT:NOREF
+/OPT:NOICF
+/INCREMENTAL:NO
+/ignore:4199
+/ignore:4099
+/DELAYLOAD:"d3d12.dll"
+/NODEFAULTLIB:"LIBCMT"
+/NODEFAULTLIB:"LIBCPMT"
+/NODEFAULTLIB:"LIBCMTD"
+/NODEFAULTLIB:"LIBCPMTD"
+/NODEFAULTLIB:"MSVCRTD"
+/NODEFAULTLIB:"MSVCPRTD"
+/NODEFAULTLIB:"LIBC"
+/NODEFAULTLIB:"LIBCP"
+/NODEFAULTLIB:"LIBCD"
+/NODEFAULTLIB:"LIBCPD"
+"C:\Program Files\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\Ball.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\BallMovement.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\BBEnums.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\Brick.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\BrickBreaker.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\BrickBreakerBaseGameMode.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\BrickBreakerGameModeBase.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\BrickBreakerGameState.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\HealthComponent.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\MainMenu.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\Paddle.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\PaddleController.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\PaddleMovementComponent.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\PaddlePlayerState.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\PlayerHUD.cpp.obj"
+"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\BrickBreaker.generated.cpp.obj"
+"C:\Program Files\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\BrickBreaker\PCLaunch.rc.res"
+"C:\Program Files\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+"delayimp.lib"
+"wininet.lib"
+"rpcrt4.lib"
+"ws2_32.lib"
+"dbghelp.lib"
+"comctl32.lib"
+"Winmm.lib"
+"kernel32.lib"
+"user32.lib"
+"gdi32.lib"
+"winspool.lib"
+"comdlg32.lib"
+"advapi32.lib"
+"shell32.lib"
+"ole32.lib"
+"oleaut32.lib"
+"uuid.lib"
+"odbc32.lib"
+"odbccp32.lib"
+"netapi32.lib"
+"iphlpapi.lib"
+"setupapi.lib"
+"dwmapi.lib"
+"imm32.lib"
+"C:\Program Files\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Slate.lib"
+"C:\Program Files\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-SlateCore.lib"
+"C:\Program Files\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Engine.lib"
+"C:\Program Files\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Core.lib"
+"C:\Program Files\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoreUObject.lib"
+"C:\Program Files\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InputCore.lib"
+"C:\Program Files\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-UMG.lib"
+/OUT:"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Binaries\Win64\UE4Editor-BrickBreaker-2466.dll"
+/IMPLIB:"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BrickBreaker-2466.suppressed.lib"
+/PDB:"C:\gsidhu\Unreal\BrickBreaker\BrickBreaker\Binaries\Win64\UE4Editor-BrickBreaker-2466.pdb"
+/ignore:4078

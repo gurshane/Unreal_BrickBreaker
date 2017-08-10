@@ -3,8 +3,18 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Character.h"
+#include "ConstructorHelpers.h"
+
 #include "GameFramework/Pawn.h"
+#include "GameFramework/SpringArmComponent.h"
+
+#include "Components/BoxComponent.h"
+#include "Components/StaticMeshComponent.h"
+
+#include "Camera/CameraComponent.h"
+
+#include "PaddleMovementComponent.h"
+
 #include "Paddle.generated.h"
 
 UCLASS()
@@ -13,33 +23,43 @@ class BRICKBREAKER_API APaddle : public APawn
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this pawn's properties
-	APaddle();
+	
+	UPROPERTY(EditAnywhere, Category = "Paddle")
+	UPaddleMovementComponent* PaddleMovementComponent;
 
-	UPROPERTY(EditAnywhere)
-	class UCameraComponent* paddleCam;
+	UPROPERTY(EditAnywhere, Category = "Paddle")
+	UBoxComponent* PaddleCollider;
 
-	UPROPERTY(EditAnywhere)
-	UStaticMeshComponent* paddleMesh;
+	UPROPERTY(EditAnywhere, Category = "Paddle")
+	UStaticMeshComponent* PaddleMesh;
 
-	UPROPERTY()
-	class UBoxComponent* paddleCollider;
+	UPROPERTY(EditAnywhere, Category = "Paddle")
+	USpringArmComponent* PaddleCameraArm;
+
+	UPROPERTY(EditAnywhere, Category = "Paddle")
+	UCameraComponent* PaddleCam;
+
+	UPROPERTY(EditAnywhere, Category = "Paddle")
+	float cameraLagSpeed;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 public:	
+
+	// Sets default values for this pawn's properties
+	APaddle();
+
+	virtual UPawnMovementComponent* GetMovementComponent() const override;
+
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	UFUNCTION()
-	void MovePaddle(float Value);
+	float GetCameraLagSpeed();
 
-	UFUNCTION()
-	void Fire();
-	
+	void SetCameraLagSpeed(float value);
 };
