@@ -73,3 +73,5 @@ Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+BrickBreaker/Content/StarterContent/Textures/T_Wood_Pine_N.uasset
+BrickBreaker/Content/StarterContent/*
